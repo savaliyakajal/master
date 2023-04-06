@@ -7,11 +7,11 @@ function Editapidata() {
     const {handleSubmit,register,setValue,formState: { errors },} = useForm();
       const navigate = useNavigate();
     const [Editdata, setEditdata] = useState();
-    // console.log(Editdata);
+    console.log(Editdata);
     const [userdata, setUserdata] = useState([]);
     console.log(userdata);
     let {id } = useParams();
-    // console.log(id);
+    console.log(id);
 
     
     useEffect(() => {
@@ -48,7 +48,7 @@ function Editapidata() {
       },  [id, userdata] );
   
        const onSubmit=(data)=>{
-        // console.log(data);
+        console.log(data);
         fetch(`https://dummyapi.io/data/v1/user/${id}`, {
             method: "PUT",
             headers: { "app-id": "639172c734f59a65dd76d340",

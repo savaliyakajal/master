@@ -16,7 +16,7 @@ function Editapidata() {
   const [userdata, setUserdata] = useState([]);
   // console.log(userdata);
   let { id } = useParams();
-  // console.log(id);
+  console.log(id);
 
   useEffect(() => {
     setValue("firstName", Editdata?.firstName);

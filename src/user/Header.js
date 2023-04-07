@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Header(props) {
   const nav = useNavigate();
   const [user, setUser] = useContext(AppContext);
-  console.log("----------user", user);
+  // console.log("----------user", user);
   const Logout = () => {
     localStorage.removeItem("Loginuser");
     localStorage.removeItem("Admin");
@@ -22,7 +22,7 @@ function Header(props) {
               <li className="nav-link">
                 <Link to="/Registration">Registration</Link>
               </li>
-              {user.user.email == undefined && user.admin.email == undefined ? (
+              {user.user.email ===undefined && user.admin.email === undefined ? (
                 <li className="nav-link">
                   <Link to="/Login">Login </Link>
                 </li>

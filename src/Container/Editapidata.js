@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-import {Col, Button,Row,Container,Card,Form,Alert,} from "react-bootstrap";
+import {Col, Row,Card,Form} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate,useParams } from "react-router-dom";
 const Api = "https://dummyapi.io/data/v1/user?page=1&limit=50";
@@ -7,11 +7,11 @@ function Editapidata() {
     const {handleSubmit,register,setValue,formState: { errors },} = useForm();
       const navigate = useNavigate();
     const [Editdata, setEditdata] = useState();
-    console.log(Editdata);
+    // console.log(Editdata);
     const [userdata, setUserdata] = useState([]);
-    console.log(userdata);
+    // console.log(userdata);
     let {id } = useParams();
-    console.log(id);
+    // console.log(id);
 
     
     useEffect(() => {

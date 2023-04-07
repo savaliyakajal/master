@@ -6,7 +6,7 @@ function Home(props) {
  
     return (
         <div>
-            gfhfhjghghjgjvgjj
+            <h6> hello word</h6>
         </div>
     );
 }

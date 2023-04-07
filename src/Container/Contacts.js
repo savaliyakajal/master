@@ -12,6 +12,7 @@ function Contacts(props) {
                     <h2 className="fw-bold mb-2 text-center text-uppercase ">
                       Contacts ditels
                     </h2>
+                    <h6> hello word</h6>
                     <div className="mb-3">
                       <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -10,7 +10,7 @@ function Header(props) {
     localStorage.removeItem("Loginuser");
     localStorage.removeItem("Admin");
     user.user = "";
-    user.admin="";
+    user.admin = "";
     nav("/Login");
   };
   return (
@@ -22,7 +22,8 @@ function Header(props) {
               <li className="nav-link">
                 <Link to="/Registration">Registration</Link>
               </li>
-              {user.user.email ===undefined && user.admin.email === undefined ? (
+              {user.user.email === undefined &&
+              user.admin.email === undefined ? (
                 <li className="nav-link">
                   <Link to="/Login">Login </Link>
                 </li>
@@ -33,9 +34,9 @@ function Header(props) {
                   </Link>
                 </li>
               )}
-            
-           
-              {user.user.email === undefined  && user.admin.email===undefined ? (
+
+              {user.user.email === undefined &&
+              user.admin.email === undefined ? (
                 ""
               ) : (
                 <li className="nav-link">
@@ -43,21 +44,20 @@ function Header(props) {
                 </li>
               )}
 
-              {user.user.email === undefined && user.admin.email===undefined ? (
+              {user.user.email === undefined &&
+              user.admin.email === undefined ? (
                 ""
               ) : (
                 <li className="nav-link">
                   <Link to="/About">About</Link>
                 </li>
               )}
-             
-                <li className="nav-link">
-                  <Link to="/Apidata">Apidata</Link>
-                </li>
-            
 
-              {user.admin.email === undefined 
-              ? (
+              <li className="nav-link">
+                <Link to="/Apidata">Apidata</Link>
+              </li>
+
+              {user.admin.email === undefined ? (
                 ""
               ) : (
                 <li className="nav-link">

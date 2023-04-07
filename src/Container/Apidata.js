@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "react-toastify/dist/ReactToastify.css";
-import { InfinitySpin } from  'react-loader-spinner';
+import { InfinitySpin } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 const Api = "https://dummyapi.io/data/v1/user?page=1&limit=50";
@@ -12,7 +12,7 @@ function Apidata() {
 
   // console.log(userdata);
   // console.log(isLoading);
-  <InfinitySpin />
+  <InfinitySpin />;
 
   useEffect(() => {
     setLoading(true);
@@ -27,10 +27,7 @@ function Apidata() {
         setTimeout(() => {
           setLoading(false);
         }, 1000);
-       
       });
-    
-    
   }, []);
 
   const handleDelete = (id) => {
@@ -46,21 +43,18 @@ function Apidata() {
         });
         const newData = userdata.filter((user) => user.id !== id);
         setUserdata(newData);
-        
       });
-    
   };
   const handleCreateUser = () => {
     Nevigate("/Createuser");
   };
   const handleEdit = (id) => {
-    console.log(id);
+    // console.log(id);
     Nevigate(`/Editapidata/${id}`);
   };
   return (
-
     <div className="text-center">
-     <ToastContainer />
+      <ToastContainer />
       <button className="btn btn-primary  " onClick={() => handleCreateUser()}>
         Create User
       </button>
@@ -82,39 +76,37 @@ function Apidata() {
           </tr>
         </thead>
         <tbody>
-          {
-            userdata.map((row) => {
-              const { id, firstName, lastName, picture, title } = row;
+          {userdata.map((row) => {
+            const { id, firstName, lastName, picture, title } = row;
 
-              return (
-                <tr key={id}>
-                  <td>{firstName}</td>
-                  <td>{id}</td>
-                  <td>{lastName}</td>
-                  <td>
-                    <img src={picture} alt={`${firstName} ${lastName}`} />
-                  </td>
-                  <td>{title}</td>
-                  <td>
-                    <button
-                      className="btn btn-danger"
-                      onClick={() => handleDelete(id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                  <td>
-                    <button
-                      className="btn btn-success"
-                      onClick={() => handleEdit(id)}
-                    >
-                      Edit
-                    </button>
-                  </td>
-                </tr>
-              );
-            })
-          }
+            return (
+              <tr key={id}>
+                <td>{firstName}</td>
+                <td>{id}</td>
+                <td>{lastName}</td>
+                <td>
+                  <img src={picture} alt={`${firstName} ${lastName}`} />
+                </td>
+                <td>{title}</td>
+                <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => handleDelete(id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className="btn btn-success"
+                    onClick={() => handleEdit(id)}
+                  >
+                    Edit
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

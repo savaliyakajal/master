@@ -15,13 +15,10 @@ import Createuser from "./Container/Createuser";
 import Editapidata from "./Container/Editapidata";
 export const AppContext = createContext();
 function App() {
-  const [loginuserdata, setLoginuserdata] = useState({admin: {} , user: {}, });
-//  console.log("------------------user------------",loginuserdata);
+  const [loginuserdata, setLoginuserdata] = useState({ admin: {}, user: {} });
+  //  console.log("------------------user------------",loginuserdata);
   function userdata(data) {
-    if (
-      data.email === "kajal123@gmail.com" &&
-      data.password === "Kajal@123"
-    ) {
+    if (data.email === "kajal123@gmail.com" && data.password === "Kajal@123") {
       setLoginuserdata({
         ...loginuserdata,
         admin: data,
@@ -44,7 +41,7 @@ function App() {
               <Layout>
                 <PublicRoute>
                   <Home />
-                  </PublicRoute>
+                </PublicRoute>
               </Layout>
             }
           />
@@ -52,9 +49,7 @@ function App() {
             path="/About"
             element={
               <Layout>
-              
-                  <About />
-               
+                <About />
               </Layout>
             }
           />
@@ -74,11 +69,11 @@ function App() {
               </Layout>
             }
           />
-           <Route
+          <Route
             path="/Apidata"
             element={
               <Layout>
-                <Apidata/>
+                <Apidata />
               </Layout>
             }
           />
@@ -86,8 +81,8 @@ function App() {
             path="/Menu"
             element={
               <Layout>
-              <PrivateRoute>
-                <Menu />
+                <PrivateRoute>
+                  <Menu />
                 </PrivateRoute>
               </Layout>
             }
@@ -100,7 +95,7 @@ function App() {
               </Layout>
             }
           />
-            <Route
+          <Route
             path="/Createuser"
             element={
               <Layout>
@@ -108,7 +103,7 @@ function App() {
               </Layout>
             }
           />
-           <Route
+          <Route
             path="/Editapidata/:id"
             element={
               <Layout>
@@ -123,4 +118,3 @@ function App() {
 }
 
 export default App;
-

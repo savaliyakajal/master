@@ -10,8 +10,8 @@ function Apidata() {
   const [userdata, setUserdata] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
-  // console.log(userdata);
-  // console.log(isLoading);
+  console.log(userdata);
+  console.log(isLoading);
   <InfinitySpin />;
 
   useEffect(() => {

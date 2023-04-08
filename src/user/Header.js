@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Header(props) {
   const nav = useNavigate();
   const [user, setUser] = useContext(AppContext);
-  // console.log("----------user", user);
+  console.log("----------user", user);
   const Logout = () => {
     localStorage.removeItem("Loginuser");
     localStorage.removeItem("Admin");

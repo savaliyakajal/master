@@ -95,7 +95,7 @@ function Registration() {
     <div>
       <Container>
         <ToastContainer />
-        {/* {alertmeg()} */}
+
         {/* {userData?.name !==undefined ? userData.password === userData.cpassword 
         ?
         ( <Alert variant="success">you aer secceefuly register</Alert>
@@ -181,16 +181,14 @@ function Registration() {
                     <div className="mt-3">
                       <p className="mb-0  text-center">
                         Already have an account?
-                        {/* {test === 1 ? ( */}
+                      
                         <button
                           onClick={Loging}
                           className="text-primary fw-bold"
                         >
                           Sign In
                         </button>
-                        {/* ) : (
-                          ""
-                        )} */}
+                      
                       </p>
                     </div>
                   </div>

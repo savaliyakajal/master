@@ -56,8 +56,9 @@ function Apidata() {
   const onChange = (e) => {
    const get=e.target.value;
    
+ const apidat= userdata
+    const filter = apidat.filter((i) => i.firstName.includes(get));
 
-    const filter = userdata.filter((i) => i.name.includes(get) );
 console.log(filter);
    
   };

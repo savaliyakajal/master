@@ -52,9 +52,27 @@ function Apidata() {
     console.log(id);
     Nevigate(`/Editapidata/${id}`);
   };
+
+  const onChange = (e) => {
+   const get=e.target.value;
+   
+
+    const filter = userdata.filter((i) => i.name.includes(get) );
+console.log(filter);
+   
+  };
   return (
     <div className="text-center">
       <ToastContainer />
+      <br></br>
+      <label>search</label>
+      <input
+        type="search"
+        name="search-bar"
+        id="search-bar"
+        placeholder="search here..... "
+        onChange={onChange}
+      />
       <button className="btn btn-primary  " onClick={() => handleCreateUser()}>
         Create User
       </button>

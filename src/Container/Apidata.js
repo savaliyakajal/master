@@ -49,7 +49,7 @@ function Apidata() {
     Nevigate("/Createuser");
   };
   const handleEdit = (id) => {
-    // console.log(id);
+    console.log(id);
     Nevigate(`/Editapidata/${id}`);
   };
 

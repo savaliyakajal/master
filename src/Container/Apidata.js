@@ -10,8 +10,8 @@ function Apidata() {
   const [userdata, setUserdata] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
-  console.log(userdata);
-  console.log(isLoading);
+  // console.log(userdata);
+  // console.log(isLoading);
   <InfinitySpin />;
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function Apidata() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         toast.success("you aer secceefuly delete!", {
           position: toast.POSITION.Top_right,
         });
@@ -49,7 +49,7 @@ function Apidata() {
     Nevigate("/Createuser");
   };
   const handleEdit = (id) => {
-    console.log(id);
+    // console.log(id);
     Nevigate(`/Editapidata/${id}`);
   };
 

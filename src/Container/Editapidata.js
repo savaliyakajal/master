@@ -12,9 +12,9 @@ function Editapidata() {
   } = useForm();
   const navigate = useNavigate();
   const [Editdata, setEditdata] = useState();
-  // console.log(Editdata);
+  console.log(Editdata);
   const [userdata, setUserdata] = useState([]);
-  // console.log(userdata);
+  console.log(userdata);
   let { id } = useParams();
   console.log(id);
 
